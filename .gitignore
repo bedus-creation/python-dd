@@ -1,1 +1,4 @@
 .idea
+python_dd.egg-info
+dist
+build

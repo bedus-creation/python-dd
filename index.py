@@ -1,4 +1,4 @@
-from src.dd import dump, dd
+from python_dd.dd import dd, dump
 
 
 class Permission:
