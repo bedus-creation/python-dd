@@ -23,11 +23,11 @@ def print_const(val, space: int = 0, end=''):
 def print_string(val: str, space=0, end='\n', wrap: bool = True):
     space = space * 1 * ' '
     quote = '\033[038;5;208m"' if wrap else ''
-    val = '\033[1;38;5;113m' + val + '\033[m'
+    val = '\033[0;38;5;113m' + val + '\033[m'
     print(space + quote + val + quote, end=end)
 
 
-def print_num(val: int | float, space: int = 0, end='\n'):
+def print_key(val, space: int = 0, end='\n'):
     space = space * ' '
     val = '\033[1;38;5;38m' + str(val) + '\033[m'
     print(space + val, end=end)
@@ -43,7 +43,7 @@ def print_dd_info():
 def dump(val, space=0, indent: int = 0, end=''):
     match val:
         case int():
-            print_num(val, space, '')
+            print_key(val, space, '')
             print_dd_info() if indent == 0 else print('', end=end)
         case str():
             print_string(val, space, '')
@@ -55,7 +55,7 @@ def dump(val, space=0, indent: int = 0, end=''):
         case tuple():
             print_list(val, indent)
         case float():
-            print_num(val, indent * 2, '')
+            print_key(val, indent * 2, '')
             print_dd_info() if indent == 0 else print('', end=end)
         case object():
             print_object(val, indent)
@@ -91,7 +91,7 @@ def print_list(val: list | tuple, indent: int = 0):
     print_dd_info() if indent == 0 else print('', end='\n')
     for item in range(len(val)):
         value = val[item]
-        print_num(item, indent * 2 + 2, '')
+        print_key(item, indent * 2 + 2, '')
         print_const('=>', 1)
         dump(value, 1, indent=indent + 1, end='\n')
     print_const(']', space=indent * 2, end='\n')

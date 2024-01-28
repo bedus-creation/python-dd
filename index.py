@@ -28,7 +28,9 @@ class User:
         return 3
 
 
-dd("Hello")
+dump("Hello Python")
+dump('')
+
 dump(1)
 dump(1.123)
 dump(['hello', 'hi', 'ok'])
