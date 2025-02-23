@@ -1,4 +1,6 @@
-from python_dd.dd import dd, dump
+from datetime import datetime
+
+from src.dd_tmgbedu.dd import dd, dump
 
 
 class Permission:
@@ -13,6 +15,9 @@ class Role:
 
 class User:
     classy = 1
+    example = None,
+    dict = {}
+    dob = None
 
     @property
     def dyno(self):
@@ -23,6 +28,7 @@ class User:
         self._password = 'password'
         self.__token = 'token'
         self.role = Role('admin')
+        self.dob = datetime.now()
 
     def fx(self):
         return 3
@@ -30,6 +36,7 @@ class User:
 
 dump("Hello Python")
 dump('')
+dump({})
 
 dump(1)
 dump(1.123)
@@ -51,5 +58,5 @@ dump({
     }
 })
 dump(User())
-
+dump(None)
 # dd(range(0, 5))

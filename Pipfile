@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 pytest = "*"
+setuptools = "*"
+twine = "*"
+bumpversion = "*"
 
 [dev-packages]
 twine = "*"
