@@ -1,5 +1,6 @@
 .idea
-python_dd.egg-info
+src/dd_tmgbedu.egg-info/
 dist
 build
 __pycache__
+key

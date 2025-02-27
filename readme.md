@@ -11,18 +11,19 @@ pip install python_dd
 ```
 
 ### Uses
+
 ```python
-from python_dd.dd import dd
+from src.dd_tmgbedu.dd import dd
 
 dd("Hello")
 dd(1)
 dd(True, True, False, 1, 2)
 ```
 
-or 
+or
 
 ```python
-from python_dd.dd import dump
+from src.dd_tmgbedu.dd import dump
 
 dump("Hello")
 dump(1)
